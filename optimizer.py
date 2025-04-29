@@ -95,7 +95,7 @@ def laplacian_smooth(vertices, faces, strength=0.05):
 
     return new_vertices
 
-def smooth_surface(vertices, faces, normal_strength=0.01, laplacian_strength=0.05):
+def smooth_surface(vertices, faces, normal_strength=0.001, laplacian_strength=0.05):
     normals = compute_vertex_normals(vertices, faces)
     curvature = estimate_curvature(vertices, faces)
     adjusted_normals = normals * curvature[:, np.newaxis]
@@ -152,9 +152,9 @@ def main():
     parser.add_argument('input_obj', type=str, help="Input .obj file")
     parser.add_argument('output_obj', type=str, help="Output .obj file")
     parser.add_argument('--objective', type=str, choices=['minimize_drag', 'maximize_lift_drag'], default='minimize_drag')
-    parser.add_argument('--steps', type=int, default=200000)
-    parser.add_argument('--step_size', type=float, default=0.001)
-    parser.add_argument('--target_vertices', type=int, default=int(1e15))
+    parser.add_argument('--steps', type=int, default=5000)
+    parser.add_argument('--step_size', type=float, default=0.01)
+    parser.add_argument('--target_vertices', type=int, default=int(1e20))
     args = parser.parse_args()
 
     original_mesh = Mesh.from_obj(args.input_obj)
