@@ -48,7 +48,7 @@ class Mesh:
         return Mesh(vertices, np.array(faces, dtype=int))
 
 def run_solver():
-    subprocess.run(["solver.exe"], check=True)
+    subprocess.run(["Fortran Math/solver.exe"], check=True)
 
 def read_forces():
     with open('data/forces.dat', 'r') as file:
