@@ -152,7 +152,7 @@ def main():
     parser.add_argument('input_obj', type=str, help="Input .obj file")
     parser.add_argument('output_obj', type=str, help="Output .obj file")
     parser.add_argument('--objective', type=str, choices=['minimize_drag', 'maximize_lift_drag'], default='minimize_drag')
-    parser.add_argument('--steps', type=int, default=5000)
+    parser.add_argument('--steps', type=int, default=1000)
     parser.add_argument('--step_size', type=float, default=0.01)
     parser.add_argument('--target_vertices', type=int, default=int(1e20))
     args = parser.parse_args()

@@ -5,9 +5,9 @@ def main():
     input_file = "input.obj"
     output_file = "output.obj"
     final_file = "final.obj"
-    objective = "minimize_drag"
+    objective =  "minimize_drag" # "maximize_lift_drag"   "minimize_drag"
 
-    command = ["python", "optimizer.py", input_file, output_file, "--objective", objective]
+    command = ["python", "optimizer.py", input_file, output_file, "--objective", objective] 
 
     try:
         subprocess.run(command, check=True)

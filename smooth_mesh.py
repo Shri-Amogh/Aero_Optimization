@@ -84,9 +84,9 @@ def main():
     parser = argparse.ArgumentParser(description="Post-process mesh smoothing")
     parser.add_argument("input_obj", type=str, help="Input optimized .obj file")
     parser.add_argument("output_obj", type=str, help="Output smoothed .obj file")
-    parser.add_argument("--normal_strength", type=float, default=0.01)
-    parser.add_argument("--laplacian_strength", type=float, default=0.3)
-    parser.add_argument("--iterations", type=int, default=50, help="Number of smoothing iterations")
+    parser.add_argument("--normal_strength", type=float, default=0.001)
+    parser.add_argument("--laplacian_strength", type=float, default=0.001)
+    parser.add_argument("--iterations", type=int, default=10, help="Number of smoothing iterations")
     args = parser.parse_args()
 
     mesh = Mesh.from_obj(args.input_obj)
