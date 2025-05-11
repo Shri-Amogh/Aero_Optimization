@@ -10,11 +10,14 @@ Replace **input.obj**  with any model file and run **main.py**
 
 
 some example of a modeled airplane optimized :
-# Example (Top)
+
+---
+# Example
+### (Top)
 ![text]( Example_images/PolygonGradientSmooth.png "Highest Quality to lowest")
 
 
-# Example (Front)
+### (Front)
 ![text]( Example_images/PolygonGradientSmoothf.png "Low number of polygons and limited smooth")
 
 Blue - Input file
